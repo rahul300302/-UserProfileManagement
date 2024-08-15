@@ -14,7 +14,7 @@ export const updateAdmin = async (req, res) => {
         } else {
             res.status(200).json({ message: 'Admin updated successfully', admin });
         }
-    } catch (error) {
+    } catch (error) { 
         res.status(500).json({ message: error.message });
     }
 };

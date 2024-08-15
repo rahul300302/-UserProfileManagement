@@ -11,7 +11,7 @@ export const addAdmin = async (req, res) => {
             let checkPassword = password == confirmPassword ? true : false
             if (password.length >= 6 && password.length <= 12 && checkPassword == true) {
                 const existingUser = await User.findOne({ email });
-                if (existingUser) {
+                if (existingUser) { 
                     return res.status(400).json({ message: 'Email already exists' });
                 } else {
                     const hashedPassword = await bcrypt.hash(password, 10);

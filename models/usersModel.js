@@ -13,5 +13,5 @@ const userSchema = new Schema({
     createdTime: { type: Date, default: Date.now },
     updatedTime: { type: Date, default: Date.now }
 });
-
+ 
 export default mongoose.model('user_data', userSchema);
