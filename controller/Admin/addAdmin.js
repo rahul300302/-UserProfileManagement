@@ -7,7 +7,7 @@ export const addAdmin = async (req, res) => {
         if (!firstName || !lastName || !email || !password) {
 
             return res.status(400).json({ message: 'All mandatory fields must be filled' });
-        } else {
+        } else { 
             let checkPassword = password == confirmPassword ? true : false
             if (password.length >= 6 && password.length <= 12 && checkPassword == true) {
                 const existingUser = await User.findOne({ email });

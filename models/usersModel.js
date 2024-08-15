@@ -15,3 +15,4 @@ const userSchema = new Schema({
 });
  
 export default mongoose.model('user_data', userSchema);
+ 

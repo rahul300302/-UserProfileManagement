@@ -18,3 +18,4 @@ router.put('/user/update', authenticate,updateUser);
 router.get('/user/view',authenticate, viewUser);
 
 export default router; 
+ 
